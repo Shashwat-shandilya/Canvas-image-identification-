@@ -1,0 +1,50 @@
+body
+{
+    background-image: url("minecraft.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+#myCanvas
+{
+    border-width:10px;
+    background-color: white; 
+    border-style:ridge;
+}
+
+h2
+{
+	border-radius: 10px;
+	padding: 5px;
+ }
+h3{
+	color: white;
+}
+span
+{
+	color: black;	
+}
+a
+{
+	text-decoration: none;
+	font-size: 20px;
+	padding: 10px;
+    float: left;
+    border-radius: 10px;
+}
+#head_info
+{
+	color: white;
+	background-color: yellow;
+	width: 600px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+ul{
+  list-style: none;
+  color: orange;
+}
+
+li{
+  font-size: 20px;
+}

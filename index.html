@@ -1,0 +1,60 @@
+<html>
+<head>  
+<link rel="stylesheet" type="text/css" href="canvas.css">
+<script src="fabric.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="html2canvas.js"></script>
+<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+</head>
+<body>
+
+<div align="center">
+<h1 class="btn btn-danger">Canvas image identifier</h1>
+<h2 class="text text-warning">*You can draw the following objects - house, battle-field, tree, swimming pool.*</h2><br>
+<h2>NOTE::You can also drag and drop items to draw and please refresh after identifying the drawing</h2><br><br>
+
+<h2>NOTE::the below keys are commands to draw</h2>
+<ul class="btn btn-success">
+ <li>shift + I - increasing height and width of blocks</li>
+ <li>shift + D - decreasing height and width of blocks</li>
+ <li>water - d</li>
+ <li>ground - g</li>
+ <li>cloud - c</li>
+ <li>light-green - l</li>
+ <li>stair1 - r</li>
+ <li>stair2 - shift + r</li>
+ <li>light-green - l</li>
+ <li>wall - w</li>
+ <li>yellow-wall - y</li>
+ <li>fireball - f</li>
+ <li>fireball2 - shift + f</li>
+ <li>angry - a</li>
+</ul><br><br>
+<label style="font-weight: bold; font-size: 30;" class="btn btn-info">*Note: up,down,left and right arrow keys to move*</label><br><br>
+    <div id="drawing">
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+    </div><br><br>
+    <h1 class="text text-danger">Here are a few examples = </h1>
+    <img src="battlefield.png" style="width: 300px;">&nbsp;&nbsp; 
+    <img src="swimmingpool.png" style="width: 300px;">&nbsp;&nbsp;
+    <img src="house.png" style="width: 300px;">&nbsp;&nbsp;&nbsp;
+    <img src="tree.png" style="width: 300px;"><br><br><br><br>
+    <button class="btn btn-success" onclick="takeSnapshot()">Take image</button><br><br>
+    <div id="capturedImg"></div><br><br>
+    <button class="btn btn-success" onclick="identify()">Identify image</button><br><br>
+
+    <div id="capturedImg"></div><br><br>
+
+    <h3 class="text text-info">You have drawn - <span id="result_drawing"></span></h3><br>
+    <h3 class="text text-info">The accuracy is - <span id="result_accuracy"></span></h3>
+    <br><br><br>
+</div>
+<script src="canvas.js"></script>
+</body>
+</html>
